@@ -1,20 +1,23 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type React from "react"
+import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import Providers from "./providers"
+import { headers } from "next/headers";
 
-export const metadata: Metadata = {
-  title: 'Buy Me A Vodka',
-  description: 'Buy me a vodka, comrade! Mint an NFT for a comrade and support the cause.',
-  generator: 'v0.dev',
+export const metadata = {
+  title: "Buy Me A Vodka - The People's NFT Platform",
+  description: "Mint NFTs for your comrades in true communist spirit",
+    generator: 'v0.dev'
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <Providers>{children}</Providers>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

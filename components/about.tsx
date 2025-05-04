@@ -55,8 +55,8 @@ export function About() {
           <h3 className="text-xl font-bold text-yellow-500 mb-4">The Party Rules</h3>
           <ul className="text-red-200 space-y-2 list-disc pl-5">
             <li>NFTs can only be minted as gifts for comrades</li>
-            <li>Each NFT represents a symbolic vodka toast</li>
-            <li>All transactions are recorded in the People's Blockchain</li>
+            <li>Each NFT represents a symbolic vodka image</li>
+            <li>All transactions are recorded in the Monad Blockchain</li>
             <li>The collective benefits from each transaction</li>
           </ul>
 

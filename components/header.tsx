@@ -1,14 +1,21 @@
 import { Star } from "lucide-react"
+import { ConnectWallet } from "@/components/connect-wallet"
 
 export function Header() {
   return (
     <header className="flex flex-col items-center justify-center py-8 text-center">
-      <div className="flex items-center justify-center mb-4">
-        <Star className="h-8 w-8 text-yellow-500 mr-2" fill="currentColor" />
-        <h1 className="text-4xl md:text-6xl font-bold text-red-600 tracking-tight">
-          BUY ME A <span className="text-yellow-500">VODKA</span>
-        </h1>
-        <Star className="h-8 w-8 text-yellow-500 ml-2" fill="currentColor" />
+      <div className="w-full flex items-center justify-between mb-6">
+        <div className="w-32">{/* Empty div for spacing */}</div>
+        <div className="flex items-center justify-center">
+          <Star className="h-8 w-8 text-yellow-500 mr-2" fill="currentColor" />
+          <h1 className="text-4xl md:text-6xl font-bold text-red-600 tracking-tight">
+            BUY ME A <span className="text-yellow-500">VODKA</span>
+          </h1>
+          <Star className="h-8 w-8 text-yellow-500 ml-2" fill="currentColor" />
+        </div>
+        <div className="w-32 flex justify-end">
+          <ConnectWallet />
+        </div>
       </div>
       <div className="relative">
         <p className="text-xl text-red-200 max-w-2xl mt-4 font-medium">

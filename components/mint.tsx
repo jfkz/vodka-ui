@@ -9,9 +9,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { AlertCircle, ExternalLink, Loader2 } from "lucide-react"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { useAccount, useConnect, useReadContract, useWaitForTransactionReceipt, useWriteContract } from "wagmi"
-import { monadTestnet } from "wagmi/chains"
 import { formatEther, isAddress, parseEther } from "viem";
 import { wagmiContractConfig } from "@/lib/contract-abi"
+import { monad } from "@wagmi/core/chains"
 
 export function Mint() {
   const [recipientAddress, setRecipientAddress] = useState("")
@@ -41,7 +41,7 @@ export function Mint() {
   const handleMint = async () => {
     const connector = connectors[0];
     if (!isConnected) {
-      connect({ connector, chainId: monadTestnet.id})
+      connect({ connector, chainId: monad.id})
       return
     }
 
@@ -183,9 +183,9 @@ export function Mint() {
                 </div>
                 {txHash && (
                   <div className="mt-2">
-                    <a className="flex items-center text-sm text-yellow-400" href={`https://testnet.monadexplorer.com/tx/${txHash}`} target="_blank" rel="noopener noreferrer">
+                    <a className="flex items-center text-sm text-yellow-400" href={`https://monadexplorer.com/tx/${txHash}`} target="_blank" rel="noopener noreferrer">
                       Transaction: {txHash.slice(0, 10)}...{txHash.slice(-8)}
-                      <ExternalLink className="ml-1 h-3 w-3" href={`https://testnet.monadexplorer.com/tx/${txHash}`} />
+                      <ExternalLink className="ml-1 h-3 w-3" href={`https://monadexplorer.com/tx/${txHash}`} />
                     </a>
                   </div>
                 )}

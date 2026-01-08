@@ -1,13 +1,13 @@
+import { monad } from '@wagmi/core/chains';
 import { http, createConfig, injected } from 'wagmi'
-import { monadTestnet } from 'wagmi/chains'
 import { metaMask, safe, walletConnect } from 'wagmi/connectors';
 
 export const config = createConfig({
-  chains: [monadTestnet],
+  chains: [monad],
   connectors: [
     injected(),
   ],
   transports: {
-    [monadTestnet.id]: http('https://testnet-rpc.monad.xyz'),
+    [monad.id]: http('https://rpc3.monad.xyz'),
   },
 })

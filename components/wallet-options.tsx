@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Star } from "lucide-react"
 import * as React from 'react'
 import { Connector, useConnect } from 'wagmi'
-import { monadTestnet } from "wagmi/chains"
+import { monad } from "@wagmi/core/chains"
 
 export function WalletOptions() {
   const { connectors, connect } = useConnect()
@@ -13,7 +13,7 @@ export function WalletOptions() {
     <WalletOption
       key={connector.uid}
       connector={connector}
-      onClick={() => connect({ connector, chainId: monadTestnet.id })}
+      onClick={() => connect({ connector, chainId: monad.id })}
     />
   ))
 }

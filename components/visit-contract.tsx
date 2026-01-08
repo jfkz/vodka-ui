@@ -7,7 +7,7 @@ import { useAccount, useDisconnect } from "wagmi"
 
 export function VisitContract() {
   const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '';
-  const link = `https://testnet.monadexplorer.com/address/${contractAddress}`;
+  const link = `https://monadexplorer.com/address/${contractAddress}`;
   return (
     <div className="flex items-center gap-2">
       <Button

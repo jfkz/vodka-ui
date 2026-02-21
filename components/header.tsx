@@ -1,6 +1,7 @@
 import { Star } from "lucide-react"
 import { ConnectWallet } from "@/components/connect-wallet"
 import { VisitContract } from "./visit-contract"
+import { NetworkSwitcher } from "./network-switcher"
 
 export function Header() {
   return (
@@ -14,7 +15,8 @@ export function Header() {
           </h1>
           <Star className="h-8 w-8 text-yellow-500 ml-2" fill="currentColor" />
         </div>
-        <div className="w-32 flex justify-end">
+        <div className="flex items-center justify-end gap-2">
+          <NetworkSwitcher />
           <VisitContract />
           <ConnectWallet />
         </div>

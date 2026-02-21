@@ -54,10 +54,10 @@ export function About() {
 
           <h3 className="text-xl font-bold text-yellow-500 mb-4">The Party Rules</h3>
           <ul className="text-red-200 space-y-2 list-disc pl-5">
-            <li>NFTs can only be minted as gifts for comrades</li>
-            <li>Each NFT represents a symbolic vodka image</li>
-            <li>All transactions are recorded in the Monad Blockchain</li>
-            <li>The collective benefits from each transaction</li>
+            <li>Mint price increases with member count and is distributed across NFT owners</li>
+            <li>Each transfer decreases NFT level until it drops to zero and burns</li>
+            <li>Every image is unique and generated at the moment of minting</li>
+            <li>Total supply is capped at 10,000 NFTs</li>
           </ul>
 
           {/* Red star */}

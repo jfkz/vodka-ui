@@ -10,7 +10,7 @@ export function VisitContract() {
   const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '';
   const chainId = useChainId();
   const testnetPrefix = chainId === monadTestnet.id ? 'testnet.' : '';
-  const link = `https://${testnetPrefix}monadvision.com/address/${contractAddress}`;
+  const link = `https://${testnetPrefix}monadvision.com/token/${contractAddress}`;
   return (
     <div className="flex items-center gap-2">
       <Button
